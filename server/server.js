@@ -9,8 +9,12 @@ const PORT = 4000;
 
 const rooms = new Map();
 
-app.get('/rooms', function(req, res){
+app.get('/rooms', (req, res) => {
     res.json(rooms);
+});
+
+app.post('/rooms', (req, res) => {
+    res.send();
 });
 
 io.on('connection', socket => {
